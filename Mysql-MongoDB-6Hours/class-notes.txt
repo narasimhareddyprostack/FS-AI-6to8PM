@@ -1,0 +1,6 @@
+Mysql-
+SQL implimation software
+
+Sub Languages
+
+DDL            DQL            DML                  DCL&TCL
