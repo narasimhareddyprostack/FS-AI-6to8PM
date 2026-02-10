@@ -1,6 +1,15 @@
-Mysql-
-SQL implimation software
+Mysql contraints(rules on data)
+7 Contraints
 
-Sub Languages
+1.Not Null      - null values not allowed
+2.Unique        - duplicates are not allowed
+3.Default       - default values
+4.check         - condition on data
+5.primary key   - not null + unique
+6.foreign key   - referencial key which is ref to another table pk
+7.index         -
 
-DDL            DQL            DML                  DCL&TCL
+1.Not Null      - null values not allowed
+2.Unique        - duplicates are not allowed
+3.Default       - default values
+4.check         - condition on data

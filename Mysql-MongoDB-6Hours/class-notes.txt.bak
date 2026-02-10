@@ -1,2 +1,10 @@
-Mysql-
-SQL implimation software
+Mysql contraints(rules on data)
+7 Contraints
+
+1.Not Null
+2.Unique 
+3.Default
+4.check
+5.primary key 
+6.foreign key 
+7.index
