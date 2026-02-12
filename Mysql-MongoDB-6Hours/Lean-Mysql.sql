@@ -185,3 +185,327 @@ CREATE TABLE employees(
 );
 
 DESC employees;
+-----------------------------------
+class-3
+
+mysql -uroot -proot
+show databases;
+DROP DATABASE 6pm;
+
+CREATE DATABASE 6pm;
+
+USE 6pm;
+
+system cls;
+show tables;
+
+CREATE TABLE product(
+p_id INT,
+pname VARCHAR(50) NOT null,
+price FLOAT CHECK(price>=50),
+rating FLOAT DEFAULT 6,
+PRIMARY KEY(p_id)
+);
+DESC product;
+
+INSERT INTO product
+VALUES
+(1,'Marker Pen',51,8.5),
+(2,'Mouse',610,4.5),
+(3,'Water bottle',200,4.5),
+(4,'Keyboard',700,2.5),
+(5,'Simple Pen',52,9.5),
+(6,'Iphone 5s',5000,5.5);
+
+INSERT INTO product(p_id,pname,price)
+VALUES
+(7,'ThinkPad',55000);
+
+
+SELECT *FROM product;
+
+SELECT p_id, 
+       pname
+FROM 
+product;
+
+SELECT p_id AS Product_Id, 
+       pname AS Product_Name
+FROM 
+product;
+
+SELECT *FROM
+product
+WHERE p_id=4;
+
+
+College   Env
+	Dept  -->Students
+Corporate Env
+    BUnit --> Employees
+
+Ecomm Evn
+    cart  -> products
+
+FK- FOREIGN KEY 
+----------------
+referencial constraint
+COLUMN contraint WITH IS refer TO another TABLE PRIMARY KEY.
+
+
+CREATE TABLE dept(
+	dept_id int,
+	dept_name VARCHAR(32) NOT NULL,
+	dept_loc VARCHAR(32) NOT NULL,
+	PRIMARY KEY(dept_id)
+);
+
+
+CREATE TABLE employees(
+	emp_id int,
+	ename VARCHAR(32) NOT null,
+	esal  FLOAT CHECK(esal>=18000),
+	gender VARCHAR(32) NOT null,
+	d_id   int,
+	PRIMARY KEY(emp_id),
+	FOREIGN KEY(d_id) REFERENCES dept(dept_id)
+);
+
+DESC dept;
+DESC employees;
+
+
+INSERT INTO  dept
+VALUES
+(1001,'IT','New Delhi'),
+(1002,'HR','Mumbai'),
+(1003,'Admin','Bangalore'),
+(1004,'Sales','Mysore');
+
+SELECT *FROM dept;
+
+
+INSERT INTO employees
+VALUES
+(101,'Rahul',45000.45,'Male',1001);
+
+system cls;
+
+SELECT *FROM dept;
+SELECT *FROM employees;
+
+INSERT INTO employees
+VALUES
+(102,'Sonia',55000.45,'Female',1001),
+(103,'Priya',65000.45,'Female',1001);
+
+INSERT INTO employees
+VALUES
+(104,'Modi',75000.45,'Male',1003),
+(105,'Amith',85000.45,'Male',1003);
+
+
+INSERT INTO employees
+VALUES
+(106,'Rajni',85000.45,'Male',1004),
+(107,'Vijay',95000.45,'Male',1004);
+
+
+INSERT INTO employees
+VALUES
+(108,'Sharuk',95000.45,'Male',1002);
+
+
+FETCH data FROM employees AND dept TABLE
+
+Employee_Id   Employee_Name  Employee_Salary  Dept_Name
+101				Rahul			45000			IT
+102				Sonia			55000			IT
+-----------------------------------------------------
+SELECT *FROM
+employees,dept;
+
+
+SELECT 
+	*FROM
+employees e, dept d
+WHERE e.d_id=d.dept_id;
+
+
+SELECT 
+	e.emp_id AS Employee_Id,
+	e.ename AS Employee_Name,
+	e.esal AS Employee_Salary,
+	d.dept_name AS Dept_Name
+FROM 
+employees e, dept d
+WHERE e.d_id=d.dept_id;
+
+
+write a SQL query TO display
+Employee_Name  Employee_City	Dept_Name  Dept_Budget
+
+
+CREATE TABLE department_info(
+dept_id INT,
+dept_name VARCHAR(50) NOT null,
+dept_location varchar(50),
+dept_budget int,
+PRIMARY KEY(dept_id)
+);
+
+CREATE TABLE employee_info(
+emp_ID varchar(32),
+emp_name VARCHAR(50) NOT null,
+emp_city  varchar(32),
+dept_id int, 
+PRIMARY KEY(emp_ID),
+FOREIGN KEY (dept_id) REFERENCES department_info (dept_id)
+);
+
+DESC department_info;
+DESC employee_info;
+
+DESC department_info;
+DESC employee_info;
+
+INSERT INTO department_info
+VALUES
+(101,'IT','FC-89',500000),
+(102,'Electronics','FC-54',400000),
+(103,'Admin','FC-56',350000),
+(104,'Accounts','FC-45',250000);
+
+INSERT INTO employee_info
+VALUES
+('E-101','Divya','Vellore',101),
+('E-102','rahul','chennai',101),
+('E-103','mani','Vellore',101),
+('E-104','vetri','kunnur',103),
+('E-105','hari','Vellore',102);
+
+SELECT * from employee_info, department_info;
+---Display only macthed rows from both tables--------
+
+SELECT * from employee_info,department_info
+WHERE employee_info.dept_id=department_info.dept_id;
+
+
+SELECT 
+employee_info.emp_name AS Employee_Name,
+employee_info.emp_city AS City,
+department_info.dept_name AS department_name,
+department_info.dept_budget AS Total_Budget
+from employee_info,department_info
+WHERE employee_info.dept_id=department_info.dept_id;
+
+======================================================
+Customer_tab(customer_id,customer_name,gender,location)
+4/5 customers
+Order_tab(order_id,details,amount,cust_id,order_status)
+10 orders
+
+1-customer - place many orders
+1-dept     has many employees.
+
+FETCH customer_name,order_detials, status
+
+
+--class-4
+
+Act LIKE MySQL Developer.
+
+CREATE TABLE AND INSERT data.
+
+Customer_tab 
+columns : customer_id,customer_name,gender,location
+
+Order_tab
+columns: order_id,details,amount,cust_id,order_status
+
+AND maintain relation 
+AND INSERT data AND FETCH below columns FROM above tables.
+customer_name,order_detials, status
+Note: without joins
+
+
+Prompt Engineering:
+
+Context   Requirement
+FORMAT    Example
+======================================
+DQL Operators
+SELECT *FROM
+tab1,tab2
+WHERE [clause]
+ORDER BY
+GROUP BY 
+
+Mysql Operators?
+----------------
+Arithmatic Operators :  + , - , *, / , %
+Relational Operators :  <, <=, >,>=
+Logical Operators    : AND,  OR 
+Equality Operators   : = 
+wildcard Operators   : %, _
+BitWise Opertaors
+=======================
+wildcard Operators - Like
+% : matches - one  OR more characters 
+_ : matches exactly one character
+===========================
+mysql -uroot -proot
+show databases;
+
+DROP DATABASE 6pm;
+CREATE DATABASE 6pm;
+USE 6pm;
+
+CREATE TABLE employees(
+	eid INT,
+	ename VARCHAR(32) NOT NULL,
+	esal FLOAT CHECK(esal>=18000),
+	loc VARCHAR(32) DEFAULT 'Bangalore',
+	gender VARCHAR(32) NOT null,
+	PRIMARY KEY(eid)
+);
+
+
+INSERT INTO employees
+VALUES
+(101,'Rahul',45000.45,'New Delhi','Male'),
+(102,'Sonia',55000.45,'Noida','Female'),
+(103,'Priyanka',65000.45,'Noida','Female'),
+(104,'Modi',75000.45,'New Delhi','Male'),
+(105,'Amith',45000.45,'New Delhi','Male'),
+(106,'Rajni',55000.45,'Chennai','Male'),
+(107,'Alia',65000.45,'Mumbai','Female'),
+(108,'Vijay',75000.45,'Chennai','Male'),
+(109,'Vijay Setupathi',45000.45,'Chennai','Male'),
+(110,'Sharuk',55000.45,'Mumbai','Male'),
+(111,'Rashmika',65000.45,'Bangalore','Female');
+
+
+write sql query 
+1. display ALL employees their name starts WITH 'R'
+2. display ALL employees their names ends WITH 'a'
+3. dispaly ALL employees their name 3rd CHAR 'j'
+
+
+write sql query 
+1. display ALL employees their name starts WITH 'R'
+
+SELECT *FROM employees
+WHERE ename LIKE 'R%';
+
+write sql query 
+2. display ALL employees their names ends WITH 'a'
+
+SELECT *FROM employees
+WHERE ename LIKE '%a';
+
+write sql query 
+3. dispaly ALL employees their name 3rd CHAR 'j';
+
+SELECT *FROM employees
+WHERE ename LIKE '__j%';

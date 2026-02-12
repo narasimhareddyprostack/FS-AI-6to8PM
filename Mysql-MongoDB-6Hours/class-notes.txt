@@ -13,3 +13,12 @@ Mysql contraints(rules on data)
 2.Unique        - duplicates are not allowed
 3.Default       - default values
 4.check         - condition on data
+========================================================
+DQL - Select
+
+select *from tab1,tab2
+[Where clause]
+[order clause]
+[Group by clause]
+==========================================================
+class - 3
