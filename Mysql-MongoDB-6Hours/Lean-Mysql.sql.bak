@@ -451,16 +451,95 @@ wildcard Operators   : %, _
 BitWise Opertaors
 =======================
 wildcard Operators - Like
-% : one  OR more characters 
-_ : exactly one character
+% : matches - one  OR more characters 
+_ : matches exactly one character
 ===========================
+mysql -uroot -proot
+show databases;
+
+DROP DATABASE 6pm;
+CREATE DATABASE 6pm;
+USE 6pm;
 
 CREATE TABLE employees(
-eid INT,
-ename VARCHAR(32) NOT NULL,
-esal FLOAT CHECK(esal>=18000)
-loc VARCHAR(32) DEFAULT 'Bangalore',
-gender VARCHAR(32) NOT null,
-PRIMARY KEY(eid)
+	eid INT,
+	ename VARCHAR(32) NOT NULL,
+	esal FLOAT CHECK(esal>=18000),
+	loc VARCHAR(32) DEFAULT 'Bangalore',
+	gender VARCHAR(32) NOT null,
+	PRIMARY KEY(eid)
 );
+
+
+INSERT INTO employees
+VALUES
+(101,'Rahul',45000.45,'New Delhi','Male'),
+(102,'Sonia',55000.45,'Noida','Female'),
+(103,'Priyanka',65000.45,'Noida','Female'),
+(104,'Modi',75000.45,'New Delhi','Male'),
+(105,'Amith',45000.45,'New Delhi','Male'),
+(106,'Rajni',55000.45,'Chennai','Male'),
+(107,'Alia',65000.45,'Mumbai','Female'),
+(108,'Vijay',75000.45,'Chennai','Male'),
+(109,'Vijay Setupathi',45000.45,'Chennai','Male'),
+(110,'Sharuk',55000.45,'Mumbai','Male'),
+(111,'Rashmika',65000.45,'Bangalore','Female');
+
+
+write sql query 
+1. display ALL employees their name starts WITH 'R'
+2. display ALL employees their names ends WITH 'a'
+3. dispaly ALL employees their name 3rd CHAR 'j'
+
+
+write sql query 
+1. display ALL employees their name starts WITH 'R'
+
+SELECT *FROM employees
+WHERE ename LIKE 'R%';
+
+write sql query 
+2. display ALL employees their names ends WITH 'a'
+
+SELECT *FROM employees
+WHERE ename LIKE '%a';
+
+write sql query 
+3. dispaly ALL employees their name 3rd CHAR 'j';
+
+SELECT *FROM employees
+WHERE ename LIKE '__j%';
+===================================================
+18. Write a query to fetch employee with
+    lowest salary and add 10000 to its salary.
+ 
+ select MIN(esal) from employee;
+ 
+ write a query to fetch lowest salary of the employee table;
+ 
+ select * from employee
+ where esal = (select MIN(esal) from employee);
+ 
+ update employee
+ set esal = esal +10000
+ where esal = (select MIN(esal) from employee);
+ =============================================================
+
+ class-5:
+ -------
+ mysql -uroot -proot
+
+
+ 18. Write a query to fetch employee with
+     lowest salary and add 10000 to its salary.
+
+UPDATE employee
+SET esal=esal+10000
+WHERE esal=(SELECT MIN(esal) FROM employee);
+===============================================
+UPDATE employee
+SET esal = esal + 10000
+ORDER BY esal
+LIMIT 1;
+
 

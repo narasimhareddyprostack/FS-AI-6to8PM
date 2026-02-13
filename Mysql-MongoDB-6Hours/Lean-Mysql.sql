@@ -509,3 +509,123 @@ write sql query
 
 SELECT *FROM employees
 WHERE ename LIKE '__j%';
+===================================================
+18. Write a query to fetch employee with
+    lowest salary and add 10000 to its salary.
+ 
+ select MIN(esal) from employee;
+ 
+ write a query to fetch lowest salary of the employee table;
+ 
+ select * from employee
+ where esal = (select MIN(esal) from employee);
+ 
+ update employee
+ set esal = esal +10000
+ where esal = (select MIN(esal) from employee);
+ =============================================================
+
+ class-5:
+ -------
+ mysql -uroot -proot
+
+
+ 18. Write a query to fetch employee with
+     lowest salary and add 10000 to its salary.
+	
+	UPDATE employee
+	SET esal=esal+10000
+	ORDER BY esal
+	limit 1;
+
+	SELECT *FROM employee
+	WHERE esal=(SELECT MIN(esal) FROM employee);
+
+	SELECT *FROM employee
+	ORDER BY esal;
+
+
+	SELECT *FROM employee
+	ORDER BY esal
+	limit 1;
+
+	UPDATE employee
+	SET esal=esal+200
+	ORDER BY esal
+	limit 1;
+
+	UPDATE employee
+	SET esal=esal+10000
+	ORDER BY esal
+	limit 1;
+
+10. Write a query to find employee with highest salary 
+    in 'Chennai'.
+
+SELECT *FROM employee
+WHERE esal=(SELECT MAX(esal) FROM employee 
+            WHERE city="Chennai")
+    
+
+1. Write a query to fetch employee whose last name is same.
+
+SELECT *
+FROM employee
+WHERE lname IN (
+    SELECT lname
+    FROM employee
+    GROUP BY lname
+    HAVING COUNT(*) > 1
+);
+
+ SELECT lname,COUNT(*) AS "No of Times"
+ FROM employee
+ GROUP BY lname
+ HAVING COUNT(*) > 1
+
+
+SELECT lname
+FROM employee
+GROUP BY lname
+HAVING COUNT(*) > 1
+
+SELECT *FROM employee
+WHERE lname IN ("Gandhi","Bhut");
+
+
+-------------------------
+1. Write a query to fetch employee whose last name is same.
+
+SELECT *FROM employee
+WHERE lname IN 
+(SELECT lname FROM employee
+GROUP BY lname
+HAVING COUNT(*) > 1
+);
+
+--------------------------------------------
+Mysql Data Types
+DATE, time, timestamp
+
+16.write a query to find employee 
+whose first name third character is 'j' 
+and live in 'Mumbai'.
+
+SELECT *FROM employee
+WHERE  condition AND condition;
+
+SELECT *FROM employee
+WHERE  fname LIKE '__j%' AND city IN ("Mumbai");
+
+SELECT *FROM employee
+WHERE  fname LIKE '__j%' AND city="Mumbai";
+
+11.Write a query to find employee 
+  who line in 'Hyderabad' 
+  with age above 70.
+
+  SELECT *FROM employee
+  WHERE condition AND condition;
+
+  SELECT *FROM employee
+  WHERE city IN ("New Delhi", "Mumbai") AND age>=70;
