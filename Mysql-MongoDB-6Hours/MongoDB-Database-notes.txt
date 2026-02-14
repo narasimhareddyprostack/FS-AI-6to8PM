@@ -1,0 +1,51 @@
+Markup language - Marked Tags
+<h1></h1>
+<Rajni></Rajni>
+<AccountId></AccountId>
+--------------- 
+HTML  - to create webpage
+XML   - Extensible Marketup Language
+JSON  
+------------------------------------
+MongoDB- NoSQL - Document based database
+Opensource-document based JSON Like database
+
+SQL  -->DB-->Table       ->row      ->columns
+NOSQL-->DB-->Collection-->Docucments->Fiels
+
+key:value pair database.
+Create    Read     Update                Delete
+
+show databases;
+
+how to create mongodb database? and how to swith/select?
+use 6pm;
+
+db.createCollection("employees");
+show collections;
+
+db.employees.find()
+
+db.employees.insertOne({})
+what is document?   - group of key:value pair
+what is collection? - group of document
+
+=======================================================
+Java         Python    JS             MongoDB
+Map 
+HashMap      Dict      Js-Object      Document
+
+db.employees.insertOne({"eid":101,"ename":"Rahul"})
+db.employees.insertMany([{},{}])
+
+db.employees.find()
+db.employees.findOne()
+
+db.employees.updateOne()
+db.employees.updateMany()
+
+db.employees.deleteOne()
+db.employees.deleteMany()
+db.employees.remove()  //deprecated
+
+db.dropDatabase()
