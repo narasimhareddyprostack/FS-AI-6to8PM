@@ -49,3 +49,108 @@ db.employees.deleteMany()
 db.employees.remove()  //deprecated
 
 db.dropDatabase()
+
+================================
+class - 7/MongoDB-2
+mongosh
+use dbone
+db.createCollection("employees");
+db.employees.insertMany();
+db.employees.countDocuments();
+
+write a query to find no of employees from Chaina.
+write a query to find no of male employees from Chaina.
+SQL Query:
+
+SELECT count(*) from employees
+where country="Chaina";
+
+SELECT count(*) from employees
+wrere country="Chaina" and gender="Male";
+
+db.employees.find({"country":"China"});
+db.employees.find({$and:[{},{}]})
+
+write a query to find no of male employees from Chaina.
+db.employees.find({$and:[{"country":"China"},
+                         {"gender":"Male"}
+			 ]
+		  })
+
+
+db.employees.find({$and:[{"country":"China"},{"gender":"Male"}]})
+db.employees.find({$and:[{"country":"China"},{"gender":"Male"}]}).count()
+
+db.employees.insertOne({})
+db.employees.insertMany([{},{},{}...])
+db.employees.find()
+db.employees.findOne()
+
+db.employees.updateOne()
+db.employees.updateMany()
+
+db.employees.deleteOne()
+db.employees.deleteMany()
+
+db.createCollection("users");
+db.users.insertMany([
+{"uid":101,"uname":"Rahul","loc":"BLR"},
+{"uid":102,"uname":"Sonai","loc":"BLR"},
+{"uid":103,"uname":"Priyana","loc":"BLR"},
+{"uid":104,"uname":"Modi","loc":"New Delhi"},
+{"uid":105,"uname":"Amith","loc":"New Delhi"}
+]);
+
+
+db.users.find().pretty();
+
+SQL Query:
+
+update users
+	set ename="Rahul Gandhi"	
+	where eid=101;
+
+db.users.updateOne({},{})
+db.users.updateOne({},{$set:{}})
+
+db.users.updateOne({"uid":101},
+                       {$set:{"uname":"Rahul Gandhi"}});
+
+db.users.findOne({"uid":101})
+
+
+db.users.updateMany({},{})
+db.users.updateMany({},{$set:{"loc":"Banagalore"}})
+
+SQL Query:
+delete from users where uid=101;
+MongoDB :
+______________
+db.users.deleteOne({"uid":101})
+db.users.deleteMany()
+db.users.deleteMany({}); - delete all documents from collection.
+
+SQL
+delete from employees; - delete all rows from table.
+
+db.col.insertOne({})
+db.col.insertMany([{},{}])
+db.col.find()
+db.col.findOne({})
+
+db.updateOne({},{})
+db.updateMany({},{})
+db.deleteOne()
+db.deleteMany()
+=========================================
+how to drop collection?
+db.users.drop();
+db.employees.drop();
+how to drop DB?
+
+db.dropDatabase();
+
+and   $and
+>     gt
+<     lt 
+==    eq
