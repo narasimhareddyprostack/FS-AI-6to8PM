@@ -532,14 +532,159 @@ WHERE ename LIKE '__j%';
 
  18. Write a query to fetch employee with
      lowest salary and add 10000 to its salary.
+	
+	UPDATE employee
+	SET esal=esal+10000
+	ORDER BY esal
+	limit 1;
 
-UPDATE employee
-SET esal=esal+10000
-WHERE esal=(SELECT MIN(esal) FROM employee);
-===============================================
-UPDATE employee
-SET esal = esal + 10000
-ORDER BY esal
-LIMIT 1;
+	SELECT *FROM employee
+	WHERE esal=(SELECT MIN(esal) FROM employee);
+
+	SELECT *FROM employee
+	ORDER BY esal;
 
 
+	SELECT *FROM employee
+	ORDER BY esal
+	limit 1;
+
+	UPDATE employee
+	SET esal=esal+200
+	ORDER BY esal
+	limit 1;
+
+	UPDATE employee
+	SET esal=esal+10000
+	ORDER BY esal
+	limit 1;
+
+10. Write a query to find employee with highest salary 
+    in 'Chennai'.
+
+SELECT *FROM employee
+WHERE esal=(SELECT MAX(esal) FROM employee 
+            WHERE city="Chennai")
+    
+
+1. Write a query to fetch employee whose last name is same.
+
+SELECT *
+FROM employee
+WHERE lname IN (
+    SELECT lname
+    FROM employee
+    GROUP BY lname
+    HAVING COUNT(*) > 1
+);
+
+ SELECT lname,COUNT(*) AS "No of Times"
+ FROM employee
+ GROUP BY lname
+ HAVING COUNT(*) > 1
+
+
+SELECT lname
+FROM employee
+GROUP BY lname
+HAVING COUNT(*) > 1
+
+SELECT *FROM employee
+WHERE lname IN ("Gandhi","Bhut");
+
+
+-------------------------
+1. Write a query to fetch employee whose last name is same.
+
+SELECT *FROM employee
+WHERE lname IN 
+(SELECT lname FROM employee
+GROUP BY lname
+HAVING COUNT(*) > 1
+);
+
+--------------------------------------------
+Mysql Data Types
+DATE, time, timestamp
+
+16.write a query to find employee 
+whose first name third character is 'j' 
+and live in 'Mumbai'.
+
+SELECT *FROM employee
+WHERE  condition AND condition;
+
+SELECT *FROM employee
+WHERE  fname LIKE '__j%' AND city IN ("Mumbai");
+
+SELECT *FROM employee
+WHERE  fname LIKE '__j%' AND city="Mumbai";
+
+11.Write a query to find employee 
+  who line in 'Hyderabad' 
+  with age above 70.
+
+  SELECT *FROM employee
+  WHERE condition AND condition;
+
+  SELECT *FROM employee
+  WHERE city IN ("New Delhi", "Mumbai") AND age>=70;
+  ==================================================
+class-8
+-------------------
+mysql -uroot -proot
+show databases;
+CREATE DATABASE 6pm;
+USE 6pm;
+
+SQL Joins: FETCH data FROM one OR more tables.
+
+CREATE TABLE customers();
+CREATE TABLE orders();
+
+CREATE TABLE customers(
+c_Id INT,
+c_Name VARCHAR(32) NOT NULL,
+loc VARCHAR(32) DEFAULT "Bangalore",
+age INT CHECK(age>=15),
+PRIMARY KEY(c_Id)
+);
+	
+DESC customers;
+
+CREATE TABLE orders(
+	order_Id INT,
+	details VARCHAR(32) NOT NULL,
+	amount FLOAT NOT NULL,
+	status VARCHAR(32) DEFAULT 'InProgress',
+	cust_Id int,
+	PRIMARY KEY(order_ID),
+	FOREIGN KEY(cust_Id) REFERENCES customers(c_Id)
+);
+
+DESC orders;
+
+INSERT INTO customers
+VALUES
+(101,'Rahul','Bangalore',52),
+(102,'Sonia','New Delhi',81),
+(103,'Priyanka','Chennai',42),
+(104,'Modi','New Delhi',76),
+(105,'Amith','New Delhi',72);
+
+INSERT INTO orders
+VALUES
+(5001,'Marker Pen',30.30,'Delivered',101),
+(5002,'Lenovo Mouse',4000.40,'InProgress',101),
+(5003,'Think Pad',108000.80,'Canceled',102),
+(5004,'Water Bootle',500.50,'InProgress',102),
+(5005,'wacom Pad',8000.80,'Delivered',103),
+(5006,'HP Printer',19000.19,'InProgress',103),
+(5007,'Iphone 5s',6000.60,'Canceled',103),
+(5008,'Apple Mac Pro',180000.18,'InProgress',103),
+(5009,'Samsung Watch',28000.29,'Delivered',103),
+(5010,'Iphone 15 Cover',700.70,'InProgress',103),
+(5011,'Iphone 18',95000.95,'Canceled',101);
+
+FETCH customer Name , ORDER Details, Amount 
+FROM customers, Orders tables.
