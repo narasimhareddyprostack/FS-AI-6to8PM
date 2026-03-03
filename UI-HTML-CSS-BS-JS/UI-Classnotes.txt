@@ -1,0 +1,24 @@
+Hyper Text Markup Language - Create web page.
+Hyper Link
+MarkUp Language  - <h1></h1>
+HTML  - create webpage/Web Presetation lang
+XML   - exchange data b/w multiple software comp.
+
+UI
+---------------
+HTML  - create webpage/Web Presetation lang
+CSS   - Styling
+Bootsrap - HTML,CSS Library? RWD
+
+Tags
+====
+Container Tags  vs Non-Container Tags
+======================================
+		   <img/>
+		   <hr/>
+		   <br/>
+		   <input/>
+		   <link>
+		   <meta>
+
+

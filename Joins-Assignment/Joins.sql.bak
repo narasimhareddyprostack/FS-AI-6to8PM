@@ -1,0 +1,24 @@
+mysql -uroot -proot
+CREATE DATABASE retail;
+USE retail;
+
+CREATE TABLE customers (
+    customer_id INT AUTO_INCREMENT,
+    cust_name VARCHAR(100) NOT NULL,
+    phone VARCHAR(15) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    address VARCHAR(255),
+    city VARCHAR(50),
+    status ENUM('ACTIVE','INACTIVE') DEFAULT 'ACTIVE',
+
+    PRIMARY KEY (customer_id)
+);
+
+CREATE TABLE products (
+    product_id VARCHAR(30) UNIQUE,
+    product_name VARCHAR(100) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    stock_quantity INT DEFAULT 0,
+    
+    PRIMARY KEY (product_id)
+);

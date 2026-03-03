@@ -703,6 +703,55 @@ St 2: display ALL customers  their placed ORDER details;
 INNER JOIN
 LEFT JOIN
 RIGHT JOIN 
+=========================================
+class-8
+mysql -uroot -proot
+show databases;
+USE 6pm;
+show tables;
 
+SELECT *FROM customers;
+SELECT *FROM orders;
 
+display customers IF they placed any orders;
+
+SELECT *FROM customers,orders
+WHERE customers.c_Id=orders.cust_Id;
+
+Join: FETCH data FROM two OR more TABLE.
+------------------------------------------
+SELECT *FROM
+customers
+INNER JOIN orders
+ON customers.c_Id=orders.cust_Id;
+
+St: RETURN mathed rows FROM both TABLEs;
+SELECT
+cust.c_Name AS "Customer Name",
+ord.details AS "Order Detials",
+ord.amount AS "Order Value"
+FROM customers cust
+INNER JOIN orders ord
+ON cust.c_Id=ord.cust_Id;
+
+st : RETURN ALL records FROM LEFT TABLE, WITH mathed records.
+     including NULL VALUES FROM RIGHT hand side TABLE ie orders
+
+SELECT
+cust.c_Name AS "Customer Name",
+ord.details AS "Order Detials",
+ord.amount AS "Order Value"
+FROM customers cust
+LEFT JOIN orders ord
+ON cust.c_Id=ord.cust_Id;
+
+RIGHT Join:
+
+SELECT
+ord.details AS "Order Detials",
+ord.amount AS "Order Value",
+cust.c_Name AS "Customer Name"
+FROM customers cust
+RIGHT JOIN orders ord
+ON cust.c_Id=ord.cust_Id;
 

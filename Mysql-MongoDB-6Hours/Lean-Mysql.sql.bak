@@ -688,3 +688,57 @@ VALUES
 
 FETCH customer Name , ORDER Details, Amount 
 FROM customers, Orders tables.
+
+SELECT *FROM customers,orders;
+
+SELECT customers.c_Name,
+       orders.details,
+	   orders.amount
+FROM customers,orders
+WHERE orders.cust_Id=customers.c_Id;	 
+
+St 1: display customers IF they placed any orders;
+St 2: display ALL customers  their placed ORDER details;
+
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN 
+=========================================
+class-8
+mysql -uroot -proot
+show databases;
+USE 6pm;
+show tables;
+
+SELECT *FROM customers;
+SELECT *FROM orders;
+
+display customers IF they placed any orders;
+
+SELECT *FROM customers,orders
+WHERE customers.c_Id=orders.cust_Id;
+
+Join: FETCH data FROM two OR more TABLE.
+------------------------------------------
+SELECT *FROM
+customers
+INNER JOIN orders
+ON customers.c_Id=orders.cust_Id;
+
+SELECT
+cust.c_Name AS "Customer Name",
+ord.details AS "Order Detials",
+ord.amount AS "Order Value"
+FROM customers cust
+INNER JOIN orders ord
+ON cust.c_Id=ord.cust_Id;
+
+
+SELECT
+cust.c_Name AS "Customer Name",
+ord.details AS "Order Detials",
+ord.amount AS "Order Value"
+FROM customers cust
+LEFT JOIN orders ord
+ON cust.c_Id=ord.cust_Id;
+
