@@ -22,3 +22,7 @@ Container Tags  vs Non-Container Tags
 		   <meta>
 
 
+Client Side - Data Validations
+HTML form <input type="text"  data validaiton attr />
+
+
