@@ -26,3 +26,75 @@ Client Side - Data Validations
 HTML form <input type="text"  data validaiton attr />
 
 
+===============
+HTML 5 New Tags
+-----------------
+header
+footer
+nav
+address
+mark
+article
+figure
+caption
+Sematic elements
+audio
+video
+SVG - Tag
+
+
+==================
+css-class:1
+
+Q) without CSS can we apply styles or not?
+   Yes! we can apply styles? how?
+
+   style attribute
+
+Dis-Adv
+a)style - Reusability
+b)Readability
+c)Modularity
+
+CSS? Cascading Style Sheet
+     brining/rendering
+
+How many Ways? can we apply css?
+		   How to Apply	    Reusability
+		   --------------------------------
+1. Inline CSS      style - attr     No  (Tag level CSS)
+2. Internal CSS    <style> Element  Yes (Page Level)
+3. External CSS    <link>  Tag      Yes (Application LeveL)
+
+CSS Rules
+--------
+Rule 1: top to button / Nearest Styles has higherst priority
+Rule 2:
+
+CSS Selector?
+    group of styles for reusability
+    block of styles
+
+h2{
+	b-c:red
+	f-f:times 
+	f-s:10 px
+ 	align:center
+   }
+
+Types of CSS Selector?
+------------------------
+Tag/Element Selector
+Group of Tag/Element Selector
+Class Selector                       .
+Id Selector                          #
+Group of Tag,class & Id Selector
+Attribute Selector                  []
+Universal Selector                   *
+
+
+CSS Rules
+--------
+Rule 1: top to button / Nearest Styles has higherst priority
+Rule 2: selector specificity
+
