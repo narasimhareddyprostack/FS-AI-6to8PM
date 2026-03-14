@@ -91,3 +91,19 @@ Id Selector                          #
 Group of Tag,class & Id Selector
 Attribute Selector                  []
 Universal Selector                   *
+
+CSS Rules
+--------
+Rule 1: top to button / Nearest Styles has higherst priority
+Rule 2: selector specificity order
+=======================
+
+Boostrap : HTML,CSS and JS Library - 
+for developing Responsive Web Design,
+
+Responsive?
+==========
+How to enable Bootstrap?
+
+CDN Link	Download		Download     npm
+					customise

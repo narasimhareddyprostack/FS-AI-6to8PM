@@ -1,0 +1,21 @@
+/*
+1.Tag Selector
+2.Class Selector               .
+3.Id Selector                  #
+4.Attribute Selector           []
+5.Universal Selector           *
+
+Note: Selector Specificity Order: 
+inline css > Id Selector > class Sel > Tag/Element 
+1000           100          10          1
+*/
+h1{
+    background-color: blue;
+}
+
+.abc{
+    background-color: green;
+}
+#xyz{
+    background-color: red;
+}
