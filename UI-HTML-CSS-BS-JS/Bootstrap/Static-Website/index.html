@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRM Application</title>
-    <link rel="stylesheet" href="./bs.css">
+    <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  </style>
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
@@ -21,8 +31,46 @@
         </ul>
        </div>
     </nav>
-    <div>
-        <h2>Index Page</h2>
-    </div>
+   
+             <div class="carousel slider" data-ride="carousel">
+                <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./images/slider1.jpg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/slider2.jpg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/slider3.jpg" alt="">
+                        </div>
+                </div>
+    
+   </div>
+    <script>
+        $('.carousel').carousel({interval: 1000})
+    </script>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a href="./index.html" class="text-white">Home</a> |
+                    <a href="./about.html" class="text-white">About</a> |
+                    <a href="./serivces.html" class="text-white">Services</a> |
+                    <a href="./employees.html" class="text-white">Employees</a> |
+                    <a href="./products.html" class="text-white">Products</a> |
+                    <a href="./contact.html" class="text-white">Contact</a> |
+                    <a href="./login.html" class="text-white">Login</a>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-6">
+                    <p>&copy; 2026 CRM IT. All rights reserved.</p>
+                </div>
+                <div class="col-6">
+                    <p>Designed By Narasimha</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

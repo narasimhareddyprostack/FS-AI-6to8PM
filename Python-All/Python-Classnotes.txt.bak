@@ -1,0 +1,90 @@
+Python-General purpose Programming Language
+
+Py - comments are non executable statements.
+Identifer Rules
+Name in python program - Identifer
+variable name
+function name
+class name
+
+
+Identifer Rules
+----------------
+1.Identifier should contains only: a-z/ A-Z/ 0-9/_
+2.Identifier should not start with digits: 0-9
+3.Idenfifier should not contains any special char/symbols
+4.Should not use keyword as identifer
+5.Idenfiers are case-sensitive
+
+variable/fun/class- name in py program
+============================================================
+Py Keyword(some words are reserved for speficic purpose)
+35 keywords
+--------------------------------------------------------
+Python Data types:
+
+<class,int>
+<class,float>
+<class,str>
+<class,bool>
+<class,complex>
+
+<class,list>
+<class,typle>
+<class,set>
+<class,dict>
+
+<class,bytes>
+<class,bytearray>
+<class,frozenset>
+<class,range>
+<class,noneType>
+
+int data type:
+---------------------------
+
+List - DS
+---------
+group of elements/values/objects as one entity
+allowed duplicats
+allowed heterogenous elements
+list elements are storing based on indexing(0 to n-1)
+-ve indexing and +ve indexing
+insertion order maintained
+list is mutable object
+list is iterable object(for loop and while loop)
+
+================================================
+
+Tuple - DS
+---------
+group of elements/values/objects as one entity
+allowed duplicats
+allowed heterogenous elements
+Tuple elements are storing based on indexing(0 to n-1)
+-ve indexing and +ve indexing
+insertion order maintained
+Tuple is Immmutable object
+Tuple is iterable object(for loop and while loop)
+
+Tuple is Read only of List.
+
+========================================
+List is Mutable
+Tuple is Immutable Object.
+
+set - Datastructure
+------------------------
+group of elements/values/objects as one entity
+duplicates are not allowed
+Heterogenous elements are allowed
+indexing concept is not applicable.
+Set is mutable object.
+set - we can iterate using only for loop.
+
+===========================================
+dict - Data Structure
+----------------------
+
+
+
