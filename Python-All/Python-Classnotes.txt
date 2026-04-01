@@ -92,5 +92,106 @@ duplicate keys are not allowed.
 heterogenous elements are allowed.
 Indexing is not applicable.
 Dict - Mutable Object.
+emp={
+	'eid':101,
+	'ename':'Rahul',
+	'esal':45000
+}
+=====================================================
+Mutability vs Immutability
+
+list,set,dict,bytearray 
+
+a=10   
+a=20
+
+a=[]  
+
+Python is Dynamic Typed Programming
+Java   is Static Typed Programming
+JS   is loosely and Dynamtic Typed PL
+=====================================
+esal=int(input("Enter Salary:"))
 
 
+if esal>=40000:
+	print("Eligible for Married")
+else:
+    print("Not Eligible")
+
+
+Operators
+Arithamatic Operators : + - * /  //  %  **
+Logical Operators     : and or 
+Relational Operators  : <,<= >,>=
+Equality Op:          : ==  !=   
+Assignment Op:        : =
+Membership OP:        : in, not in
+Identity Op:          : is , is not
+
+Why Py- is not supporting ++/-- operators?
+
+Membership OP:        in, not
+To verify member/element/value/item/object
+present in py sequence or not?
+
+py sequence:
+----------------
+list
+tuple
+set
+str
+bytes
+bytearray
+frozenset
+range()
+
+enames=["RG","SG","PG","Modi"]
+"SG" in enames               True
+"Narasimha" not in enames    True
+
+==========================
+
++                                          *  
+Addition				  Multiplication
+
+
+
+Identity Op:          : is , is not
+Address comparision operator
+
++++++++++++++++++++++++++++++++++++++++++++++++++++
+class -5
+
+Py Modules:
+Module- Py file acting as module.
+
+variables,functins, classes:module Members
+
+inbuilt modules and user defined modules.
+
+How to import modules members? import,from and as keywords
+========================================================
+import module1,module2...
+import module1 as m1, module2 as m2...
+
+from module import member1,member2,member3
+from module import member1 as m1,member2 as m2,member3 as m3
+
+from module import *
+
+user.py  - module name:  user
+user-defined module
+
+math.py - inbult/built-in module
+
+random module: generate random numbers
+=======================================
+random
+-----
+randint()  - genereate randmom integer 
+random()   - generate randmon number b/w  0 -1 
+randrange() 
+choise()   - getting random element from seqeunce
+choises()  - gettting list of element from source
+=======================================================
