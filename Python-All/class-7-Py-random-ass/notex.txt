@@ -1,0 +1,5 @@
+Create a random 10 Char password
+1.UpperCase  A-Z
+2.LowerCase  a-z
+3.Digits     0-9
+4.Special Symbols  

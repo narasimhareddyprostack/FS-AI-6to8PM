@@ -195,3 +195,11 @@ randrange()
 choise()   - getting random element from seqeunce
 choises()  - gettting list of element from source
 =======================================================
+Generate 10 4 digit OTP numbers?
+
+++++++++++++++++++++++++++++++++++++++++
+Argument Types:
+1.Positional Arguments
+2.Keyword Arguemnt
+3.Default Agrument
+4.Varlenght Arguments

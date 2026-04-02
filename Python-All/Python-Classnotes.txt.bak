@@ -170,4 +170,28 @@ variables,functins, classes:module Members
 
 inbuilt modules and user defined modules.
 
+How to import modules members? import,from and as keywords
+========================================================
+import module1,module2...
+import module1 as m1, module2 as m2...
 
+from module import member1,member2,member3
+from module import member1 as m1,member2 as m2,member3 as m3
+
+from module import *
+
+user.py  - module name:  user
+user-defined module
+
+math.py - inbult/built-in module
+
+random module: generate random numbers
+=======================================
+random
+-----
+randint()  - genereate randmom integer 
+random()   - generate randmon number b/w  0 -1 
+randrange() 
+choise()   - getting random element from seqeunce
+choises()  - gettting list of element from source
+=======================================================
