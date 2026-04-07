@@ -203,3 +203,18 @@ Argument Types:
 2.Keyword Arguemnt
 3.Default Agrument
 4.Varlenght Arguments
+
+===============================
+inner function
+--------------
+def user_details():
+
+    def login():
+       pass 
+
+    def logout():
+        pass 
+
+how to invoke - inner function from outside?
+
+return inner function ref.
