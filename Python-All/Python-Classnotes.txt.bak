@@ -203,3 +203,84 @@ Argument Types:
 2.Keyword Arguemnt
 3.Default Agrument
 4.Varlenght Arguments
+
+===============================
+inner function
+--------------
+def user_details():
+
+    def login():
+       pass 
+
+    def logout():
+        pass 
+
+how to invoke - inner function from outside?
+
+return inner function ref.
+=====================================
+File Handling
+Extract Data from user.csv file
+and load into new json file user.json
+
+read data from user.csv file and write data into json file.
+=========================================
+Rest API- requests module
+-----------------------
+Usage: fetch all users
+Rest API URL: https://jsonplaceholder.typicode.com/users
+Method Type:  GET
+Required Feilds: None
+Access Type:   Public
+
+
+Usage: login
+Rest API URL: https://flipkart.com/users/login
+Method Type:  POST
+Required Feilds: email,password
+Access Type:   Public
+===================================================
+Error Handling Pyhton
+PDBC
+a)MongoDB
+b)MySQL
+ETL Pipelines
+
+OOP-using Python
+==============================
+
+def login(): - user defined function
+    pass 
+
+
+print()      - built-in function/inbuilt function
+input()
+len()
+min()
+max()
+type()
+id()
+sorted()
+---------
+int()
+str()
+complex()
+bool()
+float()
+list()
+tuple()
+set()
+dict()
+bytes()
+bytearray()
+frozeset()
+range()
+nontype()
+bin()
+oct()
+hex()
+--------
+filter()
+map()
+
+Prepare inbuilt function: tech - doc with example
