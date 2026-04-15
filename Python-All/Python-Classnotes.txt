@@ -284,3 +284,138 @@ filter()
 map()
 
 Prepare 40 inbuilt function: tech - doc with example
+=====================================================
+
+python module - requests
+------------------------
+involing rest api?
+
+
+
+resp=request.get(url)
+
+print(10/2)    5.0
+print(10/0)    ZeroDivisionError
+print(10/5)    
+
+How to handle error in python?
+
+try:
+  pass   #risky code
+
+except:
+  pass   #handling code
+
+finally:
+   pass #
+
+raise:  #for handling customer error
+
+
+Java/JS                      Python 
+------
+try{}                        try: pass
+catch(){}                    except:pass 
+finally(){}                  finally:pass
+
+throw                        raise    - for handling custom
+throws
+
+PDBC - Mysql,MongoDB - CRUD - Error Handling
+
+ETL Pipeline - with error handling
+
+sys module
+------------------------------------------
+math
+random
+json
+csv
+requests
+sys
+pathlib
+os
+=============================================
+
+cmd>mysql -uroot -proot
+
+mysql>drop database 6pm;
+>create database 6pm;
+>use 6pm;
+>show tables;
+
+SQL Databases
+---------------
+Mysql
+SQLServer
+Oracle DB
+PG
+maria DB
+
+install database specific driver software/package.
+mysql-connector
+
+
+Install: pip install mysql-connector-python.
+
+pip install mysql-connector-python
+
+====================================================
+Mysql - SQL st
+
+Write a Python Script
+a)Create new Table       
+b)Insert data into table
+c)Read data from table
+d)Update data from table
+e)Delete data from table
+
+Task:
+invoke RestAPI and insert user data into mysql user table.
+
+Rest API URL:https://jsonplaceholder.typicode.com/users
+Method Type:GET
+
+User Table info:
+table name: users
+columns:uid,uname,city
+
+create table users(
+uid int,
+uname varchar(32),
+city varchar(32)
+);
+mysql> desc users;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| uid   | int         | YES  |     | NULL    |       |
+| uname | varchar(32) | YES  |     | NULL    |       |
+| city  | varchar(32) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+
+
+Task 2:
+invoke Rest API and insert  only beauty product data 
+into mysql table:
+
+Rest API info:
+Rest API URL: https://dummyjson.com/products
+Method Type: GET
+Products Table:
+table name: products
+columns: prod_Id, prod_Name,price,category
+
+
+
+Project Details:
+Desc & Roles,Resp
+
+create Product Requestment doc
+
+based on PRD - create prompt.
+
+
+Based on promot - write code using Cursor AI IDE/AntiGravity.
