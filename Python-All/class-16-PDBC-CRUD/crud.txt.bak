@@ -1,0 +1,30 @@
+Write a python Script to 
+
+1)create new table
+2)insert one record into table
+3)insert multiple rows into table
+3)read data from table
+4)update data from table
+5)update mutpliple records from table
+6)delete record/records from table
+
+SQL Statements
+
+create table employee(
+eid int primary key,
+ename varchar(32) not null,
+esal float,
+loc varchar(32) default 'Bangalore',
+gender varchar(32) 
+);
+
+
+insert into employee(eid,ename,esal,loc,gender)
+values
+(101,'Rahul',45000.45,'Bangalore','Male');
+
+insert into employee(eid,ename,esal,loc,gender)
+values(%s,%s,%s,%s,%s);
+
+
+select *from employee;
